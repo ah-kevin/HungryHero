@@ -1,0 +1,20 @@
+//2015年8月27日 16:53
+var MenuScene = cc.Scene.extend({
+
+    ctor: function () {
+        //继承父类
+        this._super();
+        this.init();
+    },
+    init: function () {
+        var layer = new cc.Layer();
+        this.addChild(layer);
+        var winSize=cc.director.getWinSize();
+        var bgWelcome=new cc.Sprite("res/graphics/bgWelcome.jpg");
+        bgWelcome.x=winSize.width/2;
+        bgWelcome.y=winSize.height/2;
+        layer.addChild(bgWelcome);
+
+
+    }
+});
