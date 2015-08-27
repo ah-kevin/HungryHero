@@ -33,7 +33,9 @@ gulp.task('html', ['js','styles'], function () {
 
   gulp.task('js', function () {
     return gulp.src('app/scripts/**/*')
+        .pipe($.sourcemaps.init())
         .pipe($.concat('main.js'))
+        .pipe($.sourcemaps.write())
         .pipe(gulp.dest('.tmp/scripts'))
         .pipe(reload({stream: true}));
   });

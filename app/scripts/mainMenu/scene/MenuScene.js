@@ -26,8 +26,20 @@ var MenuScene = cc.Scene.extend({
         this._hero.y=400;
         layer.addChild(this._hero);
 
+        var move=cc.moveTo(2,cc.p(this._hero.width/2+100,this._hero.y)).easing(cc.easeOut(2));
+        this._hero.runAction(move);
+
         var MMtouch=new MMtouchLayer();
         this.addChild(MMtouch);
+
+        //添加背景音乐
+        Sound.playMenuBgMusic();
+        this.scheduleUpdate();
+    },
+    update: function (dt) {
+        var currentDate=new Date();
+        this._hero.y=400+(Math.cos(currentDate.getTime()*0.002))*25;
+
 
     }
 });
