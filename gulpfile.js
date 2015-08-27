@@ -92,7 +92,7 @@ gulp.task('serve', ['js','styles', 'fonts'], function () {
   ]).on('change', reload);
 
   
-  gulp.watch('app/scripts/**/*.js', ['js']);
+  gulp.watch('app/scripts/**/*', ['js']);
   gulp.watch('app/styles/**/*.css', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);

@@ -7459,7 +7459,7 @@ cc._tmp.WebGLTexture2D = function () {
         stringForFormat: function () {
             return cc.Texture2D._M[this._pixelFormat];
         },
-        bitsPerPixelForFormat: function (format) {//TODO I want to delete the format argument, use this._pixelFormat
+        bitsPerPixelForFormat: function (format) {
             format = format || this._pixelFormat;
             var value = cc.Texture2D._B[format];
             if (value != null) return value;
