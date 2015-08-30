@@ -38,6 +38,6 @@ var MMtouchLayer = cc.Layer.extend({
         cc.director.runScene(new AboutScene())
     },
     _play: function () {
-        //cc.director.runScene(new )
+        cc.director.runScene(new GameScene());
     }
 });
